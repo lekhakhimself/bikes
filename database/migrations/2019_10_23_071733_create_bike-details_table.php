@@ -35,6 +35,6 @@ class CreateBikeDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bike-details');
+    
     }
 }

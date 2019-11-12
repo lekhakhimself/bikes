@@ -26,7 +26,7 @@ class bikeValidation extends FormRequest
         return [
             'cname' => "required | max:15|alpha",
             'isactive' => "required",
-            'memo' => "required|max:150",
+            'memo' => "required|max:500",
             //
         ];
     }
@@ -40,7 +40,7 @@ class bikeValidation extends FormRequest
             'cname.alpha' => 'supports only alphabets',
             'isactive.required' => 'Is active is required',
             'memo.required' => 'description is required',
-            'memo.max' => 'only support upto 150 letters',
+            'memo.max' => 'only support upto 500 letters',
         ];
     }
 }

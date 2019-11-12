@@ -40,7 +40,7 @@ class BikeCategory extends Controller
             'is_active' => $request->get('isactive')
         ]);
 
-        $request->session()->flash('success-message', 'user register successfully');
+        $request->session()->flash('success-message', 'category added successfully');
         return redirect()->back();
     }
 

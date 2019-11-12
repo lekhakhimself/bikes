@@ -25,8 +25,6 @@ class ChangeConfigTable extends Migration
      */
     public function down()
     {
-        Schema::table('configs', function (Blueprint $table) {
-            //
-        });
+        
     }
 }

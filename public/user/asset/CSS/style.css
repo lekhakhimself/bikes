@@ -1,0 +1,357 @@
+
+.active{
+	border-bottom: 2px solid white;
+} 
+.bgimg{
+	
+	background:url('../Images/image.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	color: white;
+	overflow: hidden;
+}
+.fietsen_bgimg{
+	
+	background:url('../Images/fietsen.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	color: white;
+	overflow: hidden;
+}
+.overons_bgimg{
+	
+	background:url('../Images/overons1.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 90vh;
+	color: white;
+	overflow: hidden;
+}
+
+.detail_bgimg{
+	
+	background:url('../Images/detail1.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	color: white;
+	overflow: hidden;
+}
+.bgimg h4, .mount h4, .fietsen_bgimg h4, .overons_bgimg h4, .detail_bgimg h4{
+	font-size: 50px;
+	padding-top: 75vh;
+	padding-left: 30px;
+}
+.bgimg p, .mount p, .mount1 p, .mount2 p, .fietsen_bgimg p, .overons_bgimg p, .detail_bgimg p{
+	padding-left: 30px;
+}
+.mount{
+	background:url('../Images/mount.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 104vh;
+	color: white;
+	overflow: hidden;
+}
+.mount1{
+	background:url('../Images/mount1.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 50vh;
+	color: white;
+	overflow: hidden;
+}
+
+.mount2{
+	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../Images/mount2.jpg') no-repeat center center;
+
+	background-size: cover;
+	width: 100%;
+	height: 50vh;
+	color: white;
+	overflow: hidden;
+}
+.mount1 h4, .mount2 h4{
+	font-size: 30px;
+	padding-top: 30vh;
+	padding-left: 30px;
+}
+
+.menutext img{
+	height: 110px;
+	width: 150px;
+}
+.overons4{
+	
+	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url('../Images/overons4.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 50vh;
+	color: white;
+	overflow: hidden;
+}
+
+.overons5{
+	
+	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url('../Images/overons5.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 50vh;
+	color: white;
+	overflow: hidden;
+}
+.overons4 h4, .overons5 h4{
+	padding-top: 30vh;
+	padding-left: 30px;
+}
+.overons4 p, .overons5 p{
+	padding-left: 30px;
+}
+
+
+
+.footer_img{
+	background: url('../Images/ftr.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh; 
+}
+.ftrow{
+	padding-top: 50px;
+}
+.ftrow p{
+	font-size: 12px;
+}
+
+
+
+/*...............media query.........*/
+
+@media (max-width: 1440px){
+	.bgimg, .fietsen_bgimg, .detail_bgimg{
+		height: 85vh;
+	}
+	.overons_bgimg{
+		height: 100vh;
+	}
+	.bgimg h4, .fietsen_bgimg h4, .detail_bgimg h4{
+		padding-top: 63vh;
+	}
+	.mount{
+		height: 75vh;
+	}
+	.mount h4{
+		padding-top: 55vh;
+	}
+	.mount1, .mount2{
+		height: 36vh;
+	}
+	.mount1 h4, .mount2 h4{
+		padding-top: 20vh;
+	}
+	.footer_img{
+		height: 80vh;
+	}
+}
+@media (max-width: 1280px){
+	.bgimg, .fietsen_bgimg, .overons_bgimg, .detail_bgimg{
+		height: 70vh;
+	}
+	.bgimg h4, .fietsen_bgimg h4, .overons_bgimg h4, .detail_bgimg h4{
+		padding-top: 53vh;
+	}
+	.menutext img{
+	height: 100px;
+	width: 140px;
+	}
+	.overons4, .overons5{
+		height: 35vh;
+	}
+	.overons4 h4, .overons5 h4{
+		padding-top: 20vh;
+	}
+	.footer_img{
+		height: 70vh;
+	}
+}
+
+@media (max-width: 1024px){
+	.bgimg, .fietsen_bgimg, .overons_bgimg, .detail_bgimg {
+		height: 40vh;
+	}
+	.bgimg h4, .fietsen_bgimg h4, .overons_bgimg h4, .detail_bgimg h4{
+		padding-top: 25vh;
+	}
+	.mount{
+		height: 34vh;
+	}
+	.mount h4{
+		padding-top: 25vh;
+	}
+	.mount1, .mount2{
+		height: 16vh;
+	}
+	.mount1 h4, .mount2 h4{
+		padding-top: 8vh;
+	}
+	.menutext img{
+	height: 90px;
+	width: 110px;
+	}
+	.menutext h6{
+	font-size: 15px;
+	}
+	.menutext p{
+	font-size: 10px;
+	}
+	.overons4, .overons5{
+		height: 20vh;
+	}
+	.overons4 h4, .overons5 h4{
+		padding-top: 10vh;
+	}
+	.footer_img{
+		height: 35vh;
+	}
+}
+
+@media (max-width: 768px){
+	.mount{
+		height: 70vh;
+	}
+	.mount h4{
+		padding-top: 55vh;
+	}
+	.mount1, .mount2{
+		height: 33vh;
+	}
+	.mount1 h4, .mount2 h4{
+		padding-top: 22vh;
+	}
+	.menutext img{
+	height: 100px;
+	width: 150px;
+	}
+	.overons4 h4, .overons5 h4{
+		font-size: 15px;
+	}
+	.overons4 p, .overons5 p{
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 414px){
+	.bgimg, .fietsen_bgimg, .overons_bgimg, .detail_bgimg{
+		height: 28vh;
+	}
+	.bgimg h4, .fietsen_bgimg h4, .overons_bgimg h4, .detail_bgimg h4{
+		font-size: 20px;
+		padding-top: 15vh;
+	}
+	.bgimg p,.mount p,.mount1 p, .mount2 p, .fietsen_bgimg p, .overons_bgimg p, .detail_bgimg p{
+		font-size: 12px;
+	}
+	.mount{
+		height: 50vh;
+	}
+	.mount h4{
+		font-size: 20px;
+		padding-top: 37vh;
+	}
+	.mount1, .mount2{
+		height: 25vh;
+	}
+	.mount1 h4, .mount2 h4{
+		font-size: 20px;
+		padding-top: 13vh;
+	}
+
+	.menutext img{
+	height: 90px;
+	width: 110px;
+	}
+	.menutext h6{
+	font-size: 12px;
+	}
+	.menutext p{
+	font-size: 8px;
+	}
+
+	.overons4, .overons5{
+		height: 25vh;
+	}
+	.footer_img{
+		height: 35vh;
+	}
+	.ftrow{
+		padding-top: 15px;
+	}
+	.ftrow h6{
+		font-size: 10px;
+	}
+	.ftrow p{
+		font-size: 8px;
+	}
+}
+@media (max-width: 375px){
+	.menutext img{
+	height: 80px;
+	width: 100px;
+	}
+	.menutext h6{
+	font-size: 12px;
+	}
+	.menutext p{
+	font-size: 8px;
+	}
+	.ftrow h6{
+		font-size: 8px;
+	}
+	.ftrow p{
+		font-size: 6px;
+	}
+}
+@media (max-width: 320px){
+	.bgimg h4, .mount h4, .mount1 h4, .mount2 h4, .fietsen_bgimg h4, .overons_bgimg h4, .detail_bgimg h4{
+		font-size: 15px;
+	}
+
+	.bgimg p, .mount p, .mount1 p, .mount2 p, .fietsen_bgimg p, .overons_bgimg p, .detail_bgimg p{
+		font-size: 10px;
+	}
+	.ftrow h6{
+		font-size: 8px;
+	}
+
+	 .ftrow p{
+		font-size: 6px;
+	}
+	.menutext img{
+	height: 70px;
+	width: 85px;
+	}
+	.menutext h6{
+	font-size: 8px;
+	}
+	.menutext p{
+	font-size: 5px;
+	}
+	.overons4 h4, .overons5 h4{
+		font-size: 12px;
+	}
+	.overons4 p, .overons5 p{
+		font-size: 10px;
+	}
+}
+
+
+
+
+
+
+
+
+
+

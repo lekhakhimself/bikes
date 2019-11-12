@@ -61,7 +61,7 @@
 
 																	<option value="string">string</option>
 																	<option value="text">New text</option>
-																	<option value="boolean">boolean Window</option>
+																	<option value="boolean">boolean</option>
 
 																</select>
 																<span class="form-text text-muted {{$errors->has('type')?'d-none':''}}">Please choose url type</span>

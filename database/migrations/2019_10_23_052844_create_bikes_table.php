@@ -34,6 +34,6 @@ class CreateBikesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bikes');
+    
     }
 }

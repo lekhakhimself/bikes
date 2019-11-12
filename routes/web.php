@@ -80,6 +80,13 @@ Route::get('/showconfiguration','config@showconfigs')->name('ShowConfiguration')
 Route::get('/showeditconfig/{id}','config@showeditconfig')->name('ShowEditConfig');
 Route::post('/updateconfiguration/{id}','config@UpdateConfiguration')->name('UpdateConfiguration');
 Route::get('/deleteconfiguration/{id}','config@deleteConfiguration')->name('DeleteConfiguration');
+Route::get('/userhome','UserController@viewhome')->name('userhome');
+Route::get('/userniews','UserController@viewniews')->name('userniews');
+Route::get('/userfietsen','UserController@viewfietsen')->name('userfietsen');
+Route::get('/useroveran','UserController@viewoverans')->name('useroveran');
+
+
+
 
 
 

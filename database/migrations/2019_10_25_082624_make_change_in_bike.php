@@ -30,9 +30,5 @@ class MakeChangeInBike extends Migration
      */
     public function down()
     {
-        Schema::table('Bikes', function (Blueprint $table) {
-            $table->dropColumn('Category');
-          
-        });
-    }
+      
 }
