@@ -15,7 +15,7 @@
 											</div>
 										</div>
 										@if(Session::has('success-message'))
-										<div>
+										<div class="alert alert-primary">
 											{{Session::get('success-message')}}
 											
 										</div>
@@ -53,6 +53,16 @@
 														<input type="number" class="form-control" name="price" placeholder="Enter Bike Price">
 														<span class="form-text text-muted">Please enter Bike Price</span>
 													</div>
+													<div class="form-group">
+														<label>Slug</label>
+														@if($errors->has('slug'))
+														<span style="color: red">
+															{{$errors->First('slug')}}
+														</span>
+														@endif
+														<input type="text" class="form-control" name="slug" placeholder="Enter Bike Slug">
+														<span class="form-text text-muted">Please enter slug for your bike</span>
+													</div>
 													
 													
 													<div class="form-group form-group-last row">
@@ -88,7 +98,7 @@
 												</div>
 												<div class="form-group form-group-last row">
 															<div class="col-lg-4 form-group-sub">
-																<label class="form-control-label">Category_Id:</label>
+																<label class="form-control-label">Category:</label>
 																@if($errors->has('category_idd'))
 														<span style="color: red">
 															{{$errors->First('category_idd')}}
@@ -97,7 +107,7 @@
 																<select class="form-control" name="category_idd">
 																	@foreach($showcategory as $showcategory)
 																	
-																	<option value={{$showcategory->id}}>{{$showcategory->id}}</option>
+																	<option value={{$showcategory->id}}>{{$showcategory->name}}</option>
 																	@endforeach
 																
 																</select>

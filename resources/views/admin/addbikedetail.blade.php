@@ -15,7 +15,7 @@
 											</div>
 										</div>
 										@if(Session::has('success-message'))
-										<div>
+										<div class="alert alert-danger">
 											{{Session::get('success-message')}}
 
 										</div>

@@ -1,12 +1,24 @@
 @extends('auser.layouts.header')
-@section('title','FIETSEN')
+@section('title','Search')
 @section('content-section')
 
 <section class="container-fluid">
+
 			<div class="fietsen_bgimg">
-				<h4> ROAD</h4> 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.</p>
+				
+				  @if(Session::has('success-message'))
+                                        <h4>
+                                            {{Session::get('success-message')}}
+
+                                       </h4>
+                                        @endif
+
+			
+				@foreach($searchbike as $bikesearch)
+				<h4>{{$bikesearch->name}}</h4> 
+
+				<p>{{$bikesearch->description}}</p>
+				@endforeach
 			</div>
 </section>
 
@@ -28,23 +40,26 @@
 		</div>
 	
 		<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white text-center ab" style="background-color: black;">Alles</div>
-			<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white bg-dark text-center ab">Performance</div>
-			<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white bg-dark text-center ab">Adventure & Gravel</div>
-			<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white bg-dark text-center ab">Cyclocross</div>
-			<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white bg-dark text-center ab">Triathlon</div>
-			<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white bg-dark text-center ab">Frames</div>
-		</div>
+			
+		<div class="row bg-dark">
+			
+			@foreach($searchbike as $bikesearch)
+			@foreach($bikesearch->Rbikes()->take(6)->get() as $newbikes)
+
+			<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white  text-center ab">{{$newbikes->Name}}</div>
+			@endforeach
+			@endforeach
+	
 	</div>
+</div>
 	<div class="container-fluid m-3">
-		@foreach($showcate as $singlecate)
-					@if($singlecate->id=='3')
+		@foreach($searchbike as $singlecate)
+					
 			<div class="row">
 				@foreach($singlecate->Rbikes()->orderBy('Name','asc')->get() as $newbike)
 
 				@foreach($newbike->Rimages()->get() as $newimage)
-				@if(($newbike->id)==($newimage->bike_id))
+				
 				<div class="col-md-3">
 					
 					<a href="{{Route('sbikedetails',[$newbike->slug])}}"><img class="img-responsive bike_img" src="{{asset('admin/bikes/'.$newimage->images)}}"></a>
@@ -55,10 +70,10 @@
 
 
 				</div>
-				@endif
+			
 				@endforeach
 				@endforeach
-				@endif
+		
 				@endforeach
 
 			</div>

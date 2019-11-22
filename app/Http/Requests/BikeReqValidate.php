@@ -24,13 +24,14 @@ class BikeReqValidate extends FormRequest
     public function rules()
     {
         return [
-     'bname' => "required | max:15|alpha",
+     'bname' => "required | max:25",
      'price'=>"required| integer",
 
             'isactive' => "required",
 
             'memo' => "required|max:150",
             'category_idd'=>"required",
+            'slug'=>'required',
             //
         ];
     }
@@ -39,15 +40,16 @@ class BikeReqValidate extends FormRequest
         return [
 
             'bname.required' => 'name must be required',
-            'bname.max' => 'maximum 15 letters only',
-            'bname.alpha' => 'supports only alphabets',
+            'bname.max' => 'maximum 25 letters only',
+            
             'price.required'=>'price is compulsory',
             'price.integer'=> 'only support integer value',
 
             'isactive.required' => 'Is active is required',
             'memo.required' => 'description is required',
             'memo.max' => 'only support upto 150 letters',
-            'category_idd.required'=>'category Id is required'
+            'category_idd.required'=>'category Id is required',
+            'slug.required'=>'slug is required'
         ];
     }
 }

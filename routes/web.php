@@ -84,6 +84,10 @@ Route::get('/userhome','UserController@viewhome')->name('userhome');
 Route::get('/userniews','UserController@viewniews')->name('userniews');
 Route::get('/userfietsen','UserController@viewfietsen')->name('userfietsen');
 Route::get('/useroveran','UserController@viewoverans')->name('useroveran');
+Route::get('/details','UserController@viewdetails')->name('details');
+Route::post('/searchbike','UserController@search')->name('search');
+Route::get('/sbikedetails/{slug}','UserController@sbikedetails')->name('sbikedetails');
+Route::get('/scategorydetails/{id}/','UserController@bikecatedetails')->name('scategorydetails');
 
 
 

@@ -25,14 +25,16 @@ class Imagevalidation extends FormRequest
     {
         return [
             'image'=>"required",
-            'bike_id'=>"required"
+            'bike_id'=>"required",
+         
             //
         ];
     }
     public function messages(){
         return[
             'image.required'=>'please choose an image',
-            'bike_id.required'=>'please choose bike'
+            'bike_id.required'=>'please choose bike',
+         
         ];
     }
 }

@@ -6,48 +6,65 @@
 				<div class="col-lg-8 col-md-8 col-sm-10 col-10 ">
 					<div class="row " style="border-bottom: 1px solid red;">
 						<div class="col-lg-2 col-md-4 col-sm-4 col-4  text-white">
-							<h6>MOUNTAIN</h6>
-							<p>Cross Country <br>
-							   Trail <br>
-							   Elektrisch <br>
-							   Downhill <br>
-							   Frames <br>
-							</p></div>
-						<div class="col-lg-2 col-md-4 col-sm-4 col-4 text-white">
-							<h6 class="hfnt">ROAD</h6>
-							<p class="fnt">Performance <br>
-							   Adventure & Gravel <br>
-							   Cyclocross <br>
-							   Triathlon <br>
-							   Frames <br>
-							</p>
+							@foreach($showcate as $singlecate)
+							@if($singlecate->id=='1')
+							<h6>{{$singlecate->name}} </h6>
+
+								@endif
+									@endforeach
+									<p class="fnt">@foreach($showbike as $singlebike)
+									@if($singlebike->category_id=='1')
+
+									{{$singlebike->Name}}<br>
+									@endif
+										@endforeach</p>
+						
 						</div>
 						<div class="col-lg-2 col-md-4 col-sm-4 col-4 text-white">
-							<h6 class="hfnt">ELEKTRICH</h6>
-							<p class="fnt">Mountain <br>
-							   City <br>
-							    <br>
-							   Elektrisch <br>
-							   Kinderen <br>
-							</p>
+								@foreach($showcate as $singlecate)
+							@if($singlecate->id=='3')
+							<h6>{{$singlecate->name}} </h6>
+
+								@endif
+									@endforeach							
+									<p class="fnt">@foreach($showbike->take(7) as $singlebike)
+									@if($singlebike->category_id=='3')
+
+									{{$singlebike->Name}}<br>
+									@endif
+										@endforeach</p>
+						</div>
+						<div class="col-lg-2 col-md-4 col-sm-4 col-4 text-white">
+							@foreach($showcate->take(5) as $singlecate)
+							@if($singlecate->id=='6')
+							<h6>{{$singlecate->name}} </h6>
+
+								@endif
+									@endforeach
+								<p class="fnt">@foreach($showbike as $singlebike)
+									@if($singlebike->category_id=='6')
+
+									{{$singlebike->Name}}<br>
+									@endif
+										@endforeach</p>
 						</div>
 						<div class="col-lg-3 col-md-6 col-sm-6 col-6 text-white">
-							<h6 class="hfnt">CONTACT</h6>
-							<p class="fnt">Specialized Branch Store <br>
-							   Zandeberg 34, 2260 Westerlo (BE) <br>
-							   Tel. 014 54 33 18 <br>
-							   info@bikes.be <br>
-							   facebook.com/4bikeswesterlo <br>
+							@foreach($showconf as $singleconf)
+							@if($singleconf->key=='CONTACT')
+							<h6 class="hfnt">{{$singleconf->key}}</h6>
+							<p class="fnt">{{$singleconf->value}}
 							</p>
+							@endif
+							@endforeach
 						</div>
 						<div class="col-lg-3 col-md-6 col-sm-6 col-6 text-white">
-							<h6 class="hfnt">OPENINGSTIJDEN</h6>
-							<p class="fnt">Monday 09:00-12:00 en 13:00-18:00 <br>
-							   Tuesday 09:00-12:00 en 13:00-18:00 <br>
-							   Wednesday 09:00-12:00 en 13:00-18:00 <br>
-							   Thursday 09:00-12:00 en 13:00-18:00 <br>
-							   Friday 09:00-12:00 en 13:00-18:00 <br>
+								@foreach($showconf as $singleconf)
+							@if($singleconf->key=='OPENINGSTIJDEN')
+							<h6 class="hfnt">{{$singleconf->key}}</h6>
+							<p class="fnt">{{$singleconf->value}}
 							</p>
+								@endif
+							@endforeach
 						</div>
 					</div>
 				</div>

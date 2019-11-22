@@ -33,6 +33,7 @@
                     <th>Is-Active</th>
                     <th>Price</th>
                     <th>Category Name</th>
+                    <th>Slug</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -48,6 +49,7 @@
                         <td>{{$singlebike->is_active}}</td>
                         <td>{{$singlebike->price}}</td>
                         <td>{{ $singlebike->category->name}}</td>
+                        <td>{{$singlebike->slug}}</td>
                         <td><a href="{{Route('editBikes',[$singlebike->id])}}"><i class="flaticon2-edit"></i></a> &nbsp;
                             &nbsp;
     <a href="{{Route('deleteBikes',[$singlebike->id])}}" onclick="return confirm('are you sure want to delete this category')"><i class="flaticon2-trash"></i></a>

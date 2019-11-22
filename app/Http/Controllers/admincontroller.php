@@ -86,10 +86,11 @@ class admincontroller extends Controller
             'short_description' => $request->get('memo'),
             'is_active' => $request->get('isactive'),
             'price' => $request->get('price'),
+            'slug'=>$request->get('slug'),
 
 
         ]);
-        $request->session()->flash('success-message', 'user register successfully');
+        $request->session()->flash('success-message', 'Bike added successfully');
         return redirect()->back();
     }
 
@@ -136,7 +137,9 @@ class admincontroller extends Controller
             'category_id' => $request->get('category_idd'),
             'short_description' => $request->get('memo'),
             'is_active' => $request->get('isactive'),
-            'price' => $request->get('price')
+            'price' => $request->get('price'),
+              'slug'=>$request->get('slug'),
+
         ]);
 
         if(!$Bikes){

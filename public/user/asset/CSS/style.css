@@ -83,6 +83,11 @@
 	height: 110px;
 	width: 150px;
 }
+.bike_img{
+	size: cover;
+	width: 100%;
+	height: 30vh;
+}
 .overons4{
 	
 	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url('../Images/overons4.jpg') no-repeat center center;
@@ -175,6 +180,9 @@
 	.footer_img{
 		height: 70vh;
 	}
+	.bike_img{
+		height: 20vh;
+	}
 }
 
 @media (max-width: 1024px){
@@ -214,6 +222,9 @@
 	}
 	.footer_img{
 		height: 35vh;
+	}
+	.bike_img{
+		height: 12vh;
 	}
 }
 
@@ -294,6 +305,9 @@
 	.ftrow p{
 		font-size: 8px;
 	}
+	.bike_img{
+		height: 25vh;
+	}
 }
 @media (max-width: 375px){
 	.menutext img{
@@ -343,6 +357,15 @@
 	}
 	.overons4 p, .overons5 p{
 		font-size: 10px;
+	}
+}
+@media (max-width: 319px){
+	.bgimg h4, .mount h4, .mount1 h4, .mount2 h4, .fietsen_bgimg h4, .overons_bgimg h4, .detail_bgimg h4{
+		font-size: 12px;
+	}
+
+	.bgimg p, .mount p, .mount1 p, .mount2 p, .fietsen_bgimg p, .overons_bgimg p, .detail_bgimg p{
+		font-size: 8px;
 	}
 }
 

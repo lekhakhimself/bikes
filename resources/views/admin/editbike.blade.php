@@ -35,6 +35,15 @@
                           
                                     <span class="form-text text-muted">Please enter your Bike name</span>
                                 </div>
+                                 
+                                <div class="form-group">
+                                    <label>Slug:</label>
+                                
+
+                                    <input type="text" class="form-control" name="slug" value="{{$editbikes->slug}}">
+                          
+                                    <span class="form-text text-muted">Please enter bike slug</span>
+                                </div>
 
 
                                 <div class="form-group">
@@ -65,19 +74,19 @@
 
                                     <div class="col-lg-9 col-md-9 col-sm-12">
                                         <textarea class="form-control" name="memo" 
-                                                  rows="8">{{$editbikes->Name}}</textarea>
+                                                  rows="8">{{$editbikes->short_description}}</textarea>
                                         <span class="form-text text-muted">Update your description.</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group form-group-last row">
                                 <div class="col-lg-4 form-group-sub">
-                                    <label class="form-control-label">Category_Id:</label>
+                                    <label class="form-control-label">Category:</label>
 
                                     <select class="form-control" name="category_idd">
                                         @foreach($showcategory as $showcategory)
 
-                                            <option value={{$showcategory->id}} @if($editbikes->category_id==$showcategory->id) @endif>{{$showcategory->id}}</option>
+                                            <option value={{$showcategory->id}} @if($editbikes->category_id==$showcategory->id) @endif>{{$showcategory->name}}</option>
                                         @endforeach
 
                                     </select>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class MakeChangeInBike extends Migration
+class AddSlugToBikes extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class MakeChangeInBike extends Migration
      */
     public function up()
     {
-        Schema::table('Bikes', function (Blueprint $table) {
-        
+        Schema::table('bikes', function (Blueprint $table) {
+            $table->string('slug')->unique();
+            //
         });
-             Schema::table('bikes', function (Blueprint $table) {
-    $table->unsignedBigInteger('category_id');
-
-    $table->foreign('category_id')->references('id')->on('bike-categories')->onDelete('cascade');
-});
     }
 
     /**
@@ -30,5 +26,8 @@ class MakeChangeInBike extends Migration
      */
     public function down()
     {
-      }
+        Schema::table('bikes', function (Blueprint $table) {
+            //
+        });
+    }
 }

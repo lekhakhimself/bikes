@@ -15,7 +15,7 @@
 											</div>
 										</div>
 										@if(Session::has('success-message'))
-										<div>
+										<div class="alert alert-primary">
 											{{Session::get('success-message')}}
 											
 										</div>
@@ -34,7 +34,7 @@
 												<div class="kt-section kt-section--first">
 													<div class="form-group">
 														<label>Parts</label>
-														<input type="text" class="form-control" name="part" placeholder="Enter bike size">
+														<input type="text" class="form-control" name="part" placeholder="Enter bike parts">
 															@if($errors->has('part'))
 														<span style="color: red">
 															{{$errors->First('part')}}
@@ -65,7 +65,7 @@
 																<select class="form-control" name="bike_id">
 																	@foreach($showBike as $showBike)
 																	
-																	<option value={{$showBike->id}}>{{$showBike->id}}</option>
+																	<option value={{$showBike->id}}>{{$showBike->Name}}</option>
 																	@endforeach
 																
 																</select>

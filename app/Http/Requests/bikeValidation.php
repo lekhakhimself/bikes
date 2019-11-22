@@ -24,7 +24,7 @@ class bikeValidation extends FormRequest
     public function rules()
     {
         return [
-            'cname' => "required | max:15|alpha",
+            'cname' => "required | max:25",
             'isactive' => "required",
             'memo' => "required|max:500",
             //
@@ -36,8 +36,8 @@ class bikeValidation extends FormRequest
         return [
 
             'cname.required' => 'name must be required',
-            'cname.max' => 'maximum 15 letters only',
-            'cname.alpha' => 'supports only alphabets',
+            'cname.max' => 'maximum 25 letters only',
+           
             'isactive.required' => 'Is active is required',
             'memo.required' => 'description is required',
             'memo.max' => 'only support upto 500 letters',

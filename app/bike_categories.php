@@ -8,5 +8,10 @@ class bike_categories extends Model
 {
 
    protected $fillable = [
-   'name','description','is_active',]; //
+   'name','description','is_active',];
+    public function Rbikes()
+    {
+        return $this->hasMany(bikes::class,'category_id');
+    } //
+
 }

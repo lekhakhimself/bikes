@@ -1,12 +1,19 @@
 @extends('auser.layouts.header')
-@section('title','FIETSEN')
+	@foreach($showcate as $singlecate)
+		@if($cid==$singlecate->id)
+@section('title',$singlecate->name)
+@endif
+@endforeach
 @section('content-section')
 
 <section class="container-fluid">
 			<div class="fietsen_bgimg">
-				<h4> ROAD</h4> 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.</p>
+				@foreach($showcate as $singlecate)
+				@if($cid==$singlecate->id)
+				<h4> {{$singlecate->name}}</h4> 
+				<p style="width: 50%;">{{$singlecate->description}}</p>
+				@endif
+				@endforeach
 			</div>
 </section>
 
@@ -28,18 +35,24 @@
 		</div>
 	
 		<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white text-center ab" style="background-color: black;">Alles</div>
-			<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white bg-dark text-center ab">Performance</div>
-			<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white bg-dark text-center ab">Adventure & Gravel</div>
-			<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white bg-dark text-center ab">Cyclocross</div>
-			<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white bg-dark text-center ab">Triathlon</div>
-			<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white bg-dark text-center ab">Frames</div>
+					<div class="row bg-dark">
+						@foreach($showcate as $singlecate)
+				@if($cid==$singlecate->id)
+			@foreach($singlecate->Rbikes()->take(6)->get() as $newbike)
+						<div class="col-lg-2 col-md-2 col-sm-2 d-inline-block text-white  text-center ab">{{$newbike->Name}}</div>
+
+		
+			@endforeach
+			@endif
+			@endforeach
+		
 		</div>
+
 	</div>
+		
 	<div class="container-fluid m-3">
 		@foreach($showcate as $singlecate)
-					@if($singlecate->id=='3')
+					@if($singlecate->id==$cid)
 			<div class="row">
 				@foreach($singlecate->Rbikes()->orderBy('Name','asc')->get() as $newbike)
 

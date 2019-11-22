@@ -63,7 +63,7 @@ class bikesGeometry extends Controller
 
 
         ]);
-               $request->session()->flash('success-message', 'user register successfully');
+               $request->session()->flash('success-message', 'Geometry Added Successfully');
         return redirect()->back();
      
           }

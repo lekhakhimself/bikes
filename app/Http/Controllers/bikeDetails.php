@@ -20,10 +20,7 @@ class bikeDetails extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+ 
     public function bikeDetail()
     {
         $this->middleware('auth');
@@ -57,7 +54,7 @@ class bikeDetails extends Controller
 
 
         ]);
-        $request -> session() ->flash('success-message','user register successfully');
+        $request -> session() ->flash('success-message','details added successfully');
         return redirect()->back(); 
           }
     /**

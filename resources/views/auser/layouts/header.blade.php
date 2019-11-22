@@ -2,7 +2,7 @@
 		<!DOCTYPE html>
 <html>
 	<head>
-	<title>@yield('title')|$ bikes</title>
+	<title>@yield('title')|4bikes</title>
 		<link rel="stylesheet" type="text/css" href="{{asset('user/asset/CSS/style.css')}}">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -47,19 +47,30 @@
 							<a href="{{Route('useroveran')}}" class="nav-link">OVER ONS</a>
 						</li>
 						<li class="nav-item m-1">
-							<a href="detail.php" class="nav-link">DETAIL</a>
+								<a href="{{Route('details')}}" class="nav-link {{Request::is('/details','details')?'active':''}}">DETAIL</a>
 						</li>
 					</ul>
 					
-					<form class="form-inline">
+					<form class="form-inline mr-2" method="post" enctype="multipart/formdata" action="{{Route('search')}}">
+						{{csrf_field()}}
 						<input class="form-control mr-sm-2" type="text" name="search" placeholder="search" >
-						<a href="" class="navbar-brand"><img src="{{asset('user/asset/Images/logo3.png')}}"></a>
+						}
+					<button class="icon bg-dark" type="submit"><img src="{{asset('user/asset/Images/logo3.png')}}"></button></form>
+						
 						<a href="" class="navbar-brand"><img src="{{asset('user/asset/Images/logo2.png')}}"></a>
-					</form>
+					
 				</div>
+
 				
 			</nav>
+			  @if(Session::has('success-message'))
+                                       <div class="alert alert-dark"><h4 class="text-center"> {{Session::get('success-message')}}</h4></div>
+                                           
+
+                                    
+                                        @endif
 		</header>
+			
 		@yield('content-section')
 @include('auser.layouts.footer')
 	</body>

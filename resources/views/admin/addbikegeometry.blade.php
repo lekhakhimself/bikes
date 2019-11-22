@@ -15,7 +15,7 @@
 											</div>
 										</div>
 										@if(Session::has('success-message'))
-										<div>
+										<div class="alert alert-primary">
 											{{Session::get('success-message')}}
 											
 										</div>
@@ -113,11 +113,11 @@
 													
 														<div class="form-group form-group-last row">
 															<div class="col-lg-4 form-group-sub">
-																<label class="form-control-label">Bike_Id:</label>
+																<label class="form-control-label">Bike Name:</label>
 																<select class="form-control" name="bike_id">
 																	@foreach($showBike as $showBike)
 																	
-																	<option value={{$showBike->id}}>{{$showBike->id}}</option>
+																	<option value={{$showBike->id}}>{{$showBike->Name}}</option>
 																	@endforeach
 																
 																</select>
