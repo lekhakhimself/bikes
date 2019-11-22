@@ -6,13 +6,7 @@
 
 			<div class="fietsen_bgimg">
 				
-				  @if(Session::has('success-message'))
-                                        <h4>
-                                            {{Session::get('success-message')}}
-
-                                       </h4>
-                                        @endif
-
+		
 			
 				@foreach($searchbike as $bikesearch)
 				<h4>{{$bikesearch->name}}</h4> 

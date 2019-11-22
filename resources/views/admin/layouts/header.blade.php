@@ -919,7 +919,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px,0px">
 									<div class="kt-header__topbar-user">
 										<span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
-										<span class="kt-header__topbar-username kt-hidden-mobile">Sean</span>
+										<span class="kt-header__topbar-username kt-hidden-mobile">{{Auth::user()->name}}</span>
 										<img class="kt-hidden" alt="Pic" src="./assets/media/users/300_25.jpg" />
 
 										<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
@@ -934,14 +934,10 @@ License: You must have a valid license purchased only from themeforest(the above
 											<img class="kt-hidden" alt="Pic" src="./assets/media/users/300_25.jpg" />
 
 											<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
-											<span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">S</span>
+										
 										</div>
-										<div class="kt-user-card__name">
-											Sean Stone
-										</div>
-										<div class="kt-user-card__badge">
-											<span class="btn btn-success btn-sm btn-bold btn-font-md">23 messages</span>
-										</div>
+										
+										
 									</div>
 
 									<!--end: Head -->
@@ -974,45 +970,9 @@ License: You must have a valid license purchased only from themeforest(the above
 												</div>
 											</div>
 										</a>
-										<a href="#" class="kt-notification__item">
-											<div class="kt-notification__item-icon">
-												<i class="flaticon2-rocket-1 kt-font-danger"></i>
-											</div>
-											<div class="kt-notification__item-details">
-												<div class="kt-notification__item-title kt-font-bold">
-													My Activities
-												</div>
-												<div class="kt-notification__item-time">
-													Logs and notifications
-												</div>
-											</div>
-										</a>
-										<a href="#" class="kt-notification__item">
-											<div class="kt-notification__item-icon">
-												<i class="flaticon2-hourglass kt-font-brand"></i>
-											</div>
-											<div class="kt-notification__item-details">
-												<div class="kt-notification__item-title kt-font-bold">
-													My Tasks
-												</div>
-												<div class="kt-notification__item-time">
-													latest tasks and projects
-												</div>
-											</div>
-										</a>
-										<a href="#" class="kt-notification__item">
-											<div class="kt-notification__item-icon">
-												<i class="flaticon2-cardiogram kt-font-warning"></i>
-											</div>
-											<div class="kt-notification__item-details">
-												<div class="kt-notification__item-title kt-font-bold">
-													Billing
-												</div>
-												<div class="kt-notification__item-time">
-													billing & statements <span class="kt-badge kt-badge--danger kt-badge--inline kt-badge--pill kt-badge--rounded">2 pending</span>
-												</div>
-											</div>
-										</a>
+									
+									
+										
 										<div class="kt-notification__custom kt-space-between">
                                             <a href="{{Route('Logout')}}"  class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</a>
 
@@ -1032,7 +992,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="kt-subheader__main">
 									<h3 class="kt-subheader__title">Dashboard</h3>
 									<span class="kt-subheader__separator kt-subheader__separator--v"></span>
-									<span class="kt-subheader__desc">#XRS-45670</span>
+									<span class="kt-subheader__desc">{{Auth::user()->email}}</span>
 									<a href="#" class="btn btn-label-warning btn-bold btn-sm btn-icon-h kt-margin-l-10">
 										Add New
 									</a>
@@ -1053,64 +1013,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 											<!--<i class="flaticon2-calendar-1"></i>-->
 										</a>
-										<div class="dropdown dropdown-inline" data-toggle-="kt-tooltip" title="Quick actions" data-placement="left">
-											<a href="#" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--md">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<polygon id="Shape" points="0 0 24 0 24 24 0 24" />
-														<path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" id="Combined-Shape" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-														<path d="M11,14 L9,14 C8.44771525,14 8,13.5522847 8,13 C8,12.4477153 8.44771525,12 9,12 L11,12 L11,10 C11,9.44771525 11.4477153,9 12,9 C12.5522847,9 13,9.44771525 13,10 L13,12 L15,12 C15.5522847,12 16,12.4477153 16,13 C16,13.5522847 15.5522847,14 15,14 L13,14 L13,16 C13,16.5522847 12.5522847,17 12,17 C11.4477153,17 11,16.5522847 11,16 L11,14 Z" id="Combined-Shape" fill="#000000" />
-													</g>
-												</svg>
-
-												<!--<i class="flaticon2-plus"></i>-->
-											</a>
-											<div class="dropdown-menu dropdown-menu-fit dropdown-menu-md dropdown-menu-right">
-
-												<!--begin::Nav-->
-												<ul class="kt-nav">
-													<li class="kt-nav__head">
-														Add anything or jump to:
-														<i class="flaticon2-information" data-toggle="kt-tooltip" data-placement="right" title="Click to learn more..."></i>
-													</li>
-													<li class="kt-nav__separator"></li>
-													<li class="kt-nav__item">
-														<a href="#" class="kt-nav__link">
-															<i class="kt-nav__link-icon flaticon2-drop"></i>
-															<span class="kt-nav__link-text">Order</span>
-														</a>
-													</li>
-													<li class="kt-nav__item">
-														<a href="#" class="kt-nav__link">
-															<i class="kt-nav__link-icon flaticon2-calendar-8"></i>
-															<span class="kt-nav__link-text">Ticket</span>
-														</a>
-													</li>
-													<li class="kt-nav__item">
-														<a href="#" class="kt-nav__link">
-															<i class="kt-nav__link-icon flaticon2-link"></i>
-															<span class="kt-nav__link-text">Goal</span>
-														</a>
-													</li>
-													<li class="kt-nav__item">
-														<a href="#" class="kt-nav__link">
-															<i class="kt-nav__link-icon flaticon2-new-email"></i>
-															<span class="kt-nav__link-text">Support Case</span>
-															<span class="kt-nav__link-badge">
-																<span class="kt-badge kt-badge--brand kt-badge--rounded">5</span>
-															</span>
-														</a>
-													</li>
-													<li class="kt-nav__separator"></li>
-													<li class="kt-nav__foot">
-														<a class="btn btn-label-brand btn-bold btn-sm" href="#">Upgrade plan</a>
-														<a class="btn btn-clean btn-bold btn-sm kt-hidden" href="#" data-toggle="kt-tooltip" data-placement="right" title="Click to learn more...">Learn more</a>
-													</li>
-												</ul>
-
-												<!--end::Nav-->
-											</div>
-										</div>
+										
 									</div>
 								</div>
 							</div>
