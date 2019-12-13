@@ -1,5 +1,5 @@
 @extends('admin.layouts.header')
-@section('title','Edit Page Menu')
+@section('title','Admin-Dashboard')
 @section('content-section')
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
                             <div class="row">

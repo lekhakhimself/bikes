@@ -9,12 +9,16 @@ class BaseController extends Controller
 {
 
     public function __construct(){
+
     $users = configuration::where('key','Maintanance')->first();
 
-        if( $users->value == "1 " ) abort(500);
- 
 
-// else{
+        if( $users->value == '1' )
+        { abort(500);
+        }
+            
+        
+ 
     }
     /**
      * Display a listing of the resource.

@@ -1,17 +1,22 @@
-    <?php
-    namespace App\Http\Controllers;
-    use App\bike_categories;
-    use App\configuration;
-    use App\Bikes;
-    use App\bike_details;
-    use App\geometry;
-    use App\gallery;
-    use App\technical_description;
-    use Illuminate\Support\Facades\DB;
-    use Illuminate\Http\Request;
-    class UserController extends BaseController
-    {
-    /**
+<?php
+
+namespace App\Http\Controllers;
+
+
+use App\bike_categories;
+use App\configuration;
+use App\Bikes;
+use App\bike_details;
+use App\geometry;
+use App\gallery;
+use App\technical_description;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+
+class UserController extends BaseController
+{
+   
+ /**
     * Display a listing of the resource.
     *
     * @return \Illuminate\Http\Response
@@ -94,7 +99,6 @@
                 $query->with('Rimages');
             }])->get();
             return view('auser.showcategorydetails',compact('showcate','cid'));
-
         }
     }
     /**
